@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=wqBXfIN3HkpM1AHKWujjCdsi"></script>
+		<script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+		<script src="https://code.jquery.com/jquery-latest.js"></script>
+		
+		<style>
+			* {
+		  margin: 0;
+		  padding: 0;
+		}
+		.a{
+		      width:100%;
+		      height:120px;
+		      line-height:120px;
+		      background-color:rgba(193,205,193,0.3);
+		      border:1.5px solid 	#CDC9C9;
+		      text-align:center;
+		      font:normal normal 65px "Yu Gothic UI Semibold";
+		    }
+		
+		.b{
+			width:88%;
+			height:80px;
+			line-height:110px;
+			background-color:white;
+			text-align:center;
+			font:normal normal 65px "微软雅黑";
+		}
+		.back{
+			width:15%;
+			height:80px;
+			line-height:110px;
+			background-color:white;
+			border:1px solid white;
+			text-align:center;
+			font:normal bold 80px "幼圆";
+			float:left;
+			}
+		.c1{
+			width:200px;
+			height:150px;
+			line-height:90px;
+			background-color:white;
+			
+			font:normal normal 40px "微软雅黑";
+			text-align:center;
+			position:absolute;
+			
+			left:50px;
+			
+		}
+		.c{
+			width:200px;
+			height:90px;
+			line-height:90px;
+			background-color:white;
+			
+			font:normal normal 45px "微软雅黑";
+			text-align:center;
+			display: flex;
+			    /*实现垂直居中*/
+			    align-items: center;
+			    /*实现水平居中*/
+			    justify-content: center;
+			    
+			    text-align: justify;
+			position:absolute;
+			left:75px;
+			
+		}
+		.c2{
+			width:200px;
+			height:90px;
+			line-height:90px;
+			
+			border:0px solid white;
+			font:normal normal 45px "微软雅黑";
+			text-align:center;
+			display: flex;
+			    /*实现垂直居中*/
+			    align-items: center;
+			    /*实现水平居中*/
+			    justify-content: center;
+			    
+			    text-align: justify;
+			position:absolute;
+			left:425px;
+			top:290px;
+			
+		}
+		.c3{
+			width:200px;
+			height:90px;
+			line-height:90px;
+			
+			border:0px solid white;
+			font:normal normal 45px "微软雅黑";
+			text-align:center;
+			display: flex;
+			    /*实现垂直居中*/
+			    align-items: center;
+			    /*实现水平居中*/
+			    justify-content: center;
+			    
+			    text-align: justify;
+			position:absolute;
+			left:425px;
+			top:790px;
+			
+		}
+		.c4{
+			width:200px;
+			height:90px;
+			line-height:90px;
+			
+			border:0px solid white;
+			font:normal normal 45px "微软雅黑";
+			text-align:center;
+			display: flex;
+			    /*实现垂直居中*/
+			    align-items: center;
+			    /*实现水平居中*/
+			    justify-content: center;
+			    
+			    text-align: justify;
+			position:absolute;
+			left:425px;
+			top:1310px;
+			
+		}
+		.m{
+			font:normal normal 60px "微软雅黑";
+			
+		}
+		.all{
+			width:600px;
+			height:90px;
+			line-height:90px;
+			color:#838B83;
+			background-color:white;
+			border:2px solid 	#CDC9C9;
+			text-align:center;
+			font:normal normal 40px "微软雅黑";
+			text-align:center;
+			position:absolute;
+			right:60px;
+			clear:both;
+		}
+		.receipt{
+			width:30%;
+			height:100px;
+			line-height:100px;
+			background-color:rgba(255,127,36,1);
+			color:white;
+			border:1.5px solid #7CCD7C;
+			text-align:center;
+			font:normal normal 50px "微软雅黑";
+			position:absolute;
+			top:1500px;
+			left:355px;
+			border-radius:20px;
+		}
+		.c5{
+			width:200px;
+			height:90px;
+			line-height:90px;
+			
+			border:0px solid white;
+			font:normal normal 45px "微软雅黑";
+			text-align:center;
+			display: flex;
+			    /*实现垂直居中*/
+			    align-items: center;
+			    /*实现水平居中*/
+			    justify-content: center;
+			    
+			    text-align: justify;
+			position:absolute;
+			left:725px;
+			top:290px;
+			
+		}
+		.c6{
+			width:200px;
+			height:90px;
+			line-height:90px;
+			
+			border:0px solid white;
+			font:normal normal 45px "微软雅黑";
+			text-align:center;
+			display: flex;
+			    /*实现垂直居中*/
+			    align-items: center;
+			    /*实现水平居中*/
+			    justify-content: center;
+			    
+			    text-align: justify;
+			position:absolute;
+			left:725px;
+			top:790px;
+			
+		}
+		.c7{
+			width:200px;
+			height:90px;
+			line-height:90px;
+			
+			border:0px solid white;
+			font:normal normal 45px "微软雅黑";
+			text-align:center;
+			display: flex;
+			    /*实现垂直居中*/
+			    align-items: center;
+			    /*实现水平居中*/
+			    justify-content: center;
+			    
+			    text-align: justify;
+			position:absolute;
+			left:725px;
+			top:1310px;
+			
+		}
+		
+		</style>
+	</head>
+
+	<body>
+		<div class="a">Pick me</div>
+		<button class="back" type="button" onclick="back()"><</button>
+		
+		
+		<div class="b">我的行程</div>
+		
+		
+		<br /><hr /><br />
+		<br /><br />
+		
+		<div>
+			<form action="">
+				<div class="m"><strong>&nbsp;&nbsp;&nbsp;&nbsp;快车</strong></div>
+				<input class="c2" type="text" name="TIME" value="价格">
+				<input class="c5" type="text" name="TIME" value="是否完成">
+				<br /><br />
+				<div class="c">时间:</div>
+				<input class="all" type="text" name="TIME"">
+				
+			<br /><br /><br /><br /><br />
+			<form action="">
+				<div class="c">上车点:</div>
+				<input class="all" type="text" name="UP"">
+				
+			
+			<br /><br /><br /><br /><br />
+			<form action="">
+			    
+				<div class="c">下车点:</div>
+				<input class="all" type="text" name="DOWN"">
+				
+			
+			<br /><br /><br /><br /><br /><br /><br /><br />
+			
+			<form action="">
+			    <div class="m"><strong>&nbsp;&nbsp;&nbsp;&nbsp;顺风车</strong></div>
+				<input class="c3" type="text" name="TIME" value="价格">
+			    <input class="c6" type="text" name="TIME" value="是否完成">
+				<br /><br />
+				<div class="c">时间:</div>
+				<input class="all" type="text" name="TIME1"">
+			
+			<br /><br /><br /><br /><br />
+			<form action="">
+				<div class="c">上车点:</div>
+				<input class="all" type="text" name="UP1"">
+			
+			<br /><br /><br /><br /><br />
+			<form action="">
+				<div class="c">下车点:</div>
+				<input class="all" type="text" name="DOWN1"">
+            <br /><br /><br /><br /><br /><br /><br /><br />
+			<form action="">
+			    <br />
+				<div class="m"><strong>&nbsp;&nbsp;&nbsp;&nbsp;短租车</strong></div>
+				<input class="c4" type="text" name="TIME" value="价格">
+				<input class="c7" type="text" name="TIME" value="是否完成">
+				<br /><br />
+				<div class="c">开始时间:</div>
+				<input class="all" type="text" name="STAR"">
+			
+			<br /><br /><br /><br /><br />
+			<form action="">
+				<div class="c">结束时间:</div>
+				<input class="all" type="text" name="OVER"">
+				<br /><br /><br /><br /><br /><br /><br /><br />
+			
+			<img src="img/beijing4.png" height="500" width="950" style="position: absolute; left:18px ;top:260px;"/>
+			<img src="img/beijing4.png" height="500" width="950" style="position: absolute; left:18px ;top:760px;"/>
+			<img src="img/beijing4.png" height="500" width="950" style="position: absolute; left:18px ;top:1260px;"/>
+		</div>
+		<script>
+			function back() {
+				window.location.href = 'homepage.html';
+			}
+		</script>
+		
+		<script>
+			   $(function(){   //get请求
+			        $('#ajax1').on('click',function(){
+			            var $telValue=$('#tel1').val();
+			            $.ajax({
+			                type: 'GET',
+			                url: 'http://127.0.0.1/users/record',				
+							data:{
+								user:$telValue,
+								type:
+							},
+			                success: function(data){
+			                    var reslutData=data;
+			                    console.log(reslutData);    
+			                    $('#reslut1').text(data["msg"]);
+			                }             
+			            })
+			        })       
+			    })
+		</script>>
+	</body>
+</html>
